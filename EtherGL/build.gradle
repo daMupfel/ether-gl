@@ -1,0 +1,51 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+// Properties
+ext {
+	gradleVersion     = "2.5"
+	joglVersion       = "2.3.2"
+	jcodecVersion     = "0.1.9"
+	jtransformVersion = "3.0"
+	tritonousVersion  = "0.3.7-2"
+	webcamVersion     = "0.3.10"
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+jar {
+    baseName = 'ether-gl-core'
+    version =  '0.1.0-SNAPSHOT'
+}
+
+dependencies {
+	// JOGL all
+ 	compile "org.jogamp.gluegen:gluegen-rt-main:$joglVersion"
+	compile "org.jogamp.jogl:jogl-all-main:$joglVersion"
+	
+	// jcodec
+	compile "org.jcodec:jcodec:$jcodecVersion"
+	
+	// jtransform
+	compile "com.github.wendykierp:JTransforms:$jtransformVersion"
+	
+	// tritonous
+	compile "com.googlecode.soundlibs:tritonus-share:$tritonousVersion"
+	
+	// webcam
+	compile "com.github.sarxos:webcam-capture:$webcamVersion"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "$gradleVersion"
+}
