@@ -1,8 +1,3 @@
-dependencies {
-	compile project(':EtherGL')
-	compile project(':EtherGL-Mapping')
-}
-
 sourceSets {
 	main {
 		java {
@@ -16,4 +11,9 @@ sourceSets {
 			srcDir 'src/20_metrobuzz'
 		}
 	}
+}
+
+dependencies {
+	compile project(':EtherGL')
+	compile project(':EtherGL-Mapping')
 }

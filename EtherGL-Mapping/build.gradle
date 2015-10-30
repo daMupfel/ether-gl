@@ -1,3 +1,11 @@
+// Properties
+ext {
+	commonsMath3Version = "3.2"
+}
+
 dependencies {
+	// commons math3
+	compile "org.apache.commons:commons-math3:$commonsMath3Version"
+
 	compile project(':EtherGL')
 }
