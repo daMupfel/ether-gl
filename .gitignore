@@ -1,1 +1,12 @@
+# Eclipse ignore
+bin/
+.classpath
+.project
+.settings/
+build/
+
+# Gradle
+.gradle
+
+# OSX
 .DS_Store

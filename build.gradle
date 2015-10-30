@@ -1,0 +1,28 @@
+// Properties
+ext {
+	gradleVersion     = '2.5'
+}
+
+allprojects {
+  apply plugin: 'java'
+}
+
+subprojects {
+    apply plugin: 'eclipse'
+
+    buildscript {
+        repositories {
+            mavenLocal()
+            mavenCentral()
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "$gradleVersion"
+}

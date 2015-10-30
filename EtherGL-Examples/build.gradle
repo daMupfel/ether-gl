@@ -1,0 +1,19 @@
+dependencies {
+	compile project(':EtherGL')
+	compile project(':EtherGL-Mapping')
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir 'src/00_basic'
+			srcDir 'src/01_assets'
+			srcDir 'src/02_mapping'
+			srcDir 'src/04_audiofx'
+			srcDir 'src/05_videofx'
+			srcDir 'src/06_audio_visualizer'
+			srcDir 'src/10_raytracing'
+			srcDir 'src/20_metrobuzz'
+		}
+	}
+}
