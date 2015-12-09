@@ -69,6 +69,10 @@ public abstract class AbstractTool implements ITool {
 	@Override
 	public void keyPressed(IKeyEvent e) {
 	}
+	
+	@Override
+	public void keyReleased(IKeyEvent e) {
+	}
 
 	// mouse listener
 

@@ -284,6 +284,13 @@ public class DefaultController implements IController {
 
 	@Override
 	public void keyReleased(IKeyEvent e) {
+		if (DBG)
+			System.out.println("key released " + e.getView());
+
+		setCurrentView(e.getView());
+
+		// pass on to tool
+		currentTool.keyReleased(e);
 	}
 
 	// pointer listener

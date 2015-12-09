@@ -56,22 +56,17 @@ public interface ITool {
 	void refresh(IView view);
 
 	// key listener
-
 	void keyPressed(IKeyEvent e);
+	void keyReleased(IKeyEvent e);
 
 	// pointer listener
-
 	void pointerPressed(IPointerEvent e);
-
 	void pointerReleased(IPointerEvent e);
 
 	// pointer motion listener
-
 	void pointerMoved(IPointerEvent e);
-
 	void pointerDragged(IPointerEvent e);
 
 	// pointer scroll listener
-
 	void pointerScrolled(IPointerEvent e);
 }
